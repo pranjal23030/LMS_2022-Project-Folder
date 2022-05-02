@@ -12,7 +12,7 @@
     $address = "";
 
     //Query
-    $sql = "SELECT * from user where email = '$_SESSION[email]'";
+    $sql = "SELECT * from user where id = '$_SESSION[id]'";
     $run_sql = mysqli_query($connection,$sql);
 
     WHILE ($row = mysqli_fetch_assoc($run_sql)){
@@ -21,6 +21,8 @@
         $email = $row['email'];
         $address = $row['address'];
     }
+
+
 ?>
 
 <!doctype html>
@@ -106,5 +108,14 @@
 </div>
 </body>
 </html>
+
+<?php
+
+    if (isset($_POST['update'])){
+        $sql = "UPDATE user SET book_name = '$_POST[book_name]', author_id = $_POST[author_id], category_id = $_POST[category_id], book_price = $_POST[book_price] WHERE book_isbn_no = $_GET[id]";
+        $sql_run= mysqli_query($connection, $sql);
+        echo "Updated Successfully!! You can re-check now";
+    }
+?>
 
 
