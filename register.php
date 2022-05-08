@@ -6,9 +6,6 @@
     //Query for Data insertion
     $sql = "INSERT INTO user VALUES(null, '$_POST[name]','$_POST[email]','$_POST[password]',$_POST[contact],'$_POST[address]')";
     $run_sql = mysqli_query($connection,$sql);
-
-//    $password = "";
-//    $param_password = password_hash($password, PASSWORD_DEFAULT)
 ?>
 
 <!--When the user registers, the following message is shown and the user is directed towards the login page!!-->
