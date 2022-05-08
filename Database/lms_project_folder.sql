@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2022 at 06:58 PM
+-- Generation Time: May 08, 2022 at 04:07 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `email`, `password`, `contact`) VALUES
-(1, 'admin', 'admin@gmail.com', 6969, 12345);
+(1, 'admin', 'admin@gmail.com', 6969, 123456);
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,8 @@ INSERT INTO `authors` (`author_id`, `author_name`) VALUES
 (3, 'Paulo Coelho'),
 (4, 'Lois Lowry'),
 (5, 'Khaled Hussaini '),
-(8, 'Gabriel Garcia Marquez');
+(8, 'Gabriel Garcia Marquez'),
+(9, 'George Orwell');
 
 -- --------------------------------------------------------
 
@@ -133,12 +134,11 @@ CREATE TABLE `issued_books` (
 --
 
 INSERT INTO `issued_books` (`stu_id`, `book_number`, `book_name`, `book_author`, `student_id`, `status`, `issue_date`) VALUES
-(1, 1234, 'The Story of my life', 'Helen Keller', 9, 1, '2022-04-16 20:19:10'),
-(8, 5678, 'The Alchemist', 'Paulo Coelho', 8, 1, '2022-04-17 00:00:00'),
-(9, 891011, 'The Giver', 'Lois Lowry', 1, 0, '2022-04-17 18:21:43'),
-(10, 1234, 'And the Mountains Echoed', 'Khaled Hussaini', 10, 1, '2022-04-17 00:00:00'),
 (11, 1234, 'The Story of my life', 'Helen Keller', 1, 1, '2022-04-17 00:00:00'),
-(12, 891011, 'The Giver', 'Lois Lowry', 8, 1, '2022-04-17 00:00:00');
+(14, 350, 'The Alchemist', 'Paulo Coelho', 11, 1, '2022-05-02 00:00:00'),
+(15, 1234, 'The Giver', 'Lois Lowry', 12, 1, '2022-05-02 00:00:00'),
+(18, 9867, 'The Alchemist', 'Paulo Coelho', 13, 1, '2022-05-02 00:00:00'),
+(19, 9867, 'And the mountains echoed ', 'Khaled Hussaini', 1, 1, '2022-05-08 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -160,10 +160,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `contact`, `address`) VALUES
-(1, 'Pranjal Khatiwada', 'pranjal.khatiwoda@gmail.com', 9867467, 123456, 'Chabahil'),
-(8, 'Ujjwal Khatiwada', 'ujjwalkhatiwada@gmail.com', 4532, 2147483647, 'Gaushala '),
-(9, 'Jack Sparrow', 'jack18@gmail.com', 8906, 909987, 'California'),
-(10, 'Jesse Plemons', 'jesseplemons@gmail.com', 8976, 897654321, 'Mexico');
+(1, 'Pranjal Khatiwada', 'pranjal.khatiwoda@gmail.com', 9867467, 989214341, 'Gaushala'),
+(11, 'Sanjay Puri', 'sanjay.puri@gmail.com', 12345, 2147483647, 'Chabahil'),
+(12, 'Arunesh Manandhar ', 'arunesh.manandhar@gmail.com', 456789, 2147483647, 'Kapan'),
+(13, 'Biplov Jung Khadka', 'biplov.jungkhdka@gmail.com', 908675, 2147483647, 'Bhaisipati');
 
 --
 -- Indexes for dumped tables
@@ -219,7 +219,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `books`
@@ -237,13 +237,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `issued_books`
 --
 ALTER TABLE `issued_books`
-  MODIFY `stu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `stu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
