@@ -108,8 +108,18 @@
         <form action="" method="post">
             <div class="form-group">
                 <label>Book Name: </label>
-                <input type="text" name="book_name" class="form-control" required>
-            </div>
+                <select name="book_name" id="" class="form-control">
+                    <option>Select book name..</option>
+                    <?php
+                        $sql = "SELECT book_name FROM books";
+                        $run_sql = mysqli_query($connection, $sql);
+                        WHILE ($row = mysqli_fetch_assoc($run_sql)) {
+                            ?>
+                            <option><?php echo $row['book_name'];?></option>
+                            <?php
+                        }
+                    ?>
+                </select> <br>
             <div class="form-group">
                 <label>Book Author: </label>
                 <select name="book_author" id="" class="form-control">
@@ -125,13 +135,33 @@
                     ?>
                 </select> <br>
                 <div class="form-group">
-                    <label>Book No.: </label>
-                    <input type="text" name="book_number" class="form-control" required>
-                </div>
+                    <label>Book ISBN no: </label>
+                    <select name="book_number" id="" class="form-control">
+                        <option>Select isbn no..</option>
+                        <?php
+                            $sql = "SELECT book_isbn_no FROM books";
+                            $run_sql = mysqli_query($connection, $sql);
+                            WHILE ($row = mysqli_fetch_assoc($run_sql)) {
+                                ?>
+                                <option><?php echo $row['book_isbn_no'];?></option>
+                                <?php
+                            }
+                        ?>
+                    </select> <br>
                 <div class="form-group">
-                    <label>Student ID</label>
-                    <input type="text" name="student_id" class="form-control" required>
-                </div>
+                    <label>Student ID: </label>
+                    <select name="student_id" id="" class="form-control">
+                        <option>Select student id..</option>
+                        <?php
+                            $sql = "SELECT id FROM user";
+                            $run_sql = mysqli_query($connection, $sql);
+                            WHILE ($row = mysqli_fetch_assoc($run_sql)) {
+                                ?>
+                                <option><?php echo $row['id'];?></option>
+                                <?php
+                            }
+                        ?>
+                    </select> <br>
                 <div class="form-group">
                     <label>Issue Date: </label>
                     <input type="text" name="issue_date" value="<?php echo date("Y-m-d");?>" class="form-control" required>
