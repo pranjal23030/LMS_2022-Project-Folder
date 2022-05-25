@@ -39,7 +39,6 @@ Steps to run this project:
   git clone https://github.com/pranjal23030/LMS_2022-Project-Folder.git
   ```
 - Open 'http://localhost/LMS_Project%20folder/' on your browser 
-- 
 
 ## Screenshots
 
