@@ -32,7 +32,7 @@ Steps to run this project:
 
 - Download and install xampp from https://www.apachefriends.org/download.html
 - Create Database named 'lms_project folder' 
-- Import lms_project_folder.sql to 'test' database
+- Import lms_project_folder.sql to 'lms_project folder' database
 - Clone the project
 
 ```bash
