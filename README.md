@@ -28,15 +28,18 @@ This Library Management System Project has been developed using PHP language wit
 
 ## How to run?
 
-Clone the project
+Steps to run this project:
+
+- Download and install xampp from https://www.apachefriends.org/download.html
+- Create Database named 'lms_project folder' 
+- Import lms_project_folder.sql to 'test' database
+- Clone the project
 
 ```bash
   git clone https://github.com/pranjal23030/LMS_2022-Project-Folder.git
-```
-
-Download the database given in Database folder
-
-The project works fine. 
+  ```
+- Open 'http://localhost/LMS_Project%20folder/' on your browser 
+- 
 
 ## Screenshots
 
